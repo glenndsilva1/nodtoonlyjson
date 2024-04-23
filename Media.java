@@ -1,6 +1,6 @@
 package test.nodto;
 
 public interface Media {
-	Media with(String id, String value);
+	Media with(String value);
 	String json();
 }

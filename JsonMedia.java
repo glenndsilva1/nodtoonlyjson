@@ -8,8 +8,8 @@ public class JsonMedia implements Media{
 	}
 	
 	@Override
-	public Media with(String id, String value) {
-		return new JsonMedia(this.page.with(id, value));
+	public Media with(String value) {
+		return new JsonMedia(this.page.with(value));
 	}
 	
 	@Override
