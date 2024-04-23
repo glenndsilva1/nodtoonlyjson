@@ -1,8 +1,7 @@
 package test.nodto;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+
 
 public class JsonPage implements Page{
 	final ArrayList<String> list;
@@ -12,14 +11,14 @@ public class JsonPage implements Page{
 	@Override
 	public String json() {
 		String str = "";
-//		for (Map.Entry<String, String> entry : map.entrySet()) {
-//		   str += " Key: " + entry.getKey() + ", Value: " + entry.getValue();
-//		}
+		for (String string : list) {
+			str += string;
+		}
+		System.out.println(str);
 		return str;
 	}
 	
 	public Page with(String name) {
-		//HashMap<String, String> a = new HashMap<String, String>();
 		ArrayList<String> a = new ArrayList<String>();
 		a.addAll(this.list);
 		a.add(name);
